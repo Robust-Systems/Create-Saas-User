@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAdminCoreWebApp", "UserAdminCoreWebApp\UserAdminCoreWebApp.csproj", "{000D24C9-DEEC-4914-AA03-87B4B5471B6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserAdminCoreWebApp", "UserAdminCoreWebApp\UserAdminCoreWebApp.csproj", "{000D24C9-DEEC-4914-AA03-87B4B5471B6C}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UserAdminDatabase", "UserAdminDatabase\UserAdminDatabase.sqlproj", "{AE5AF04D-3900-49BD-856D-E58F63E74948}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{000D24C9-DEEC-4914-AA03-87B4B5471B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{000D24C9-DEEC-4914-AA03-87B4B5471B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{000D24C9-DEEC-4914-AA03-87B4B5471B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5AF04D-3900-49BD-856D-E58F63E74948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5AF04D-3900-49BD-856D-E58F63E74948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5AF04D-3900-49BD-856D-E58F63E74948}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AE5AF04D-3900-49BD-856D-E58F63E74948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5AF04D-3900-49BD-856D-E58F63E74948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5AF04D-3900-49BD-856D-E58F63E74948}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
