@@ -67,4 +67,7 @@
     <Build Include="dbo\Stored Procedures\UserAdd.sql" />
     <Build Include="dbo\Stored Procedures\UserExists.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="UserAdminDatabase.publish.xml" />
+  </ItemGroup>
 </Project>
