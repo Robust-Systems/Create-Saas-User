@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using DataLibrary.BusinessLogic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using UserAdminCoreWebAppNoID.Models;
+using UserAdminCoreWebAppNoID.Services;
 
 namespace UserAdminCoreWebAppNoID.Controllers
 {
   public class HomeController : Controller
   {
     private readonly ILogger<HomeController> _logger;
+    private readonly UserService _userService;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, UserService userService)
     {
       _logger = logger;
+      _userService = userService;
     }
 
     public IActionResult Index()
@@ -34,8 +38,11 @@ namespace UserAdminCoreWebAppNoID.Controllers
     [ValidateAntiForgeryToken]
     public IActionResult SignUp(UserModel model)
     {
+      var temp = _userService;
+
       if (ModelState.IsValid)
       {
+        _userService.CreateUserAccount(model);
 
         return RedirectToAction("Index");
       }

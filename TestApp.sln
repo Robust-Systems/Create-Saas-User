@@ -9,6 +9,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UserAdminDatabase", "UserAd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAdminCoreWebAppNoID", "UserAdminCoreWebAppNoID\UserAdminCoreWebAppNoID.csproj", "{B8C9C19A-53DB-4B5F-8F37-D25F3A5154A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLibrary", "DataLibrary\DataLibrary.csproj", "{3C08752F-65DA-490D-805B-C82DC0CB4CEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{B8C9C19A-53DB-4B5F-8F37-D25F3A5154A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8C9C19A-53DB-4B5F-8F37-D25F3A5154A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8C9C19A-53DB-4B5F-8F37-D25F3A5154A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C08752F-65DA-490D-805B-C82DC0CB4CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C08752F-65DA-490D-805B-C82DC0CB4CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C08752F-65DA-490D-805B-C82DC0CB4CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C08752F-65DA-490D-805B-C82DC0CB4CEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

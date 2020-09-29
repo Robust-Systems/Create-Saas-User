@@ -5,8 +5,9 @@
 --              based on provided email address.
 -- =============================================
 CREATE PROCEDURE UserExists
-  @EmailAddress VARCHAR(100),
-  @UserExists   BIT = 0 OUTPUT
+
+  @EmailAddress VARCHAR(100)
+
 AS
   BEGIN
 
@@ -14,12 +15,14 @@ AS
 
       BEGIN TRY
 
-         SET @UserExists = 0
-
-		 IF EXISTS ( SELECT 1 FROM [User] WHERE EmailAddress = @EmailAddress )
-		 BEGIN
-			SET @UserExists = 1
-		 END
+		     IF EXISTS ( SELECT 1 FROM [User] WHERE EmailAddress = @EmailAddress )
+		      BEGIN
+			     SELECT [Exists] = CAST(1 AS BIT)
+		      END
+         ELSE
+          BEGIN
+           SELECT [Exists] = CAST(0 AS BIT)
+          END
 
       END TRY
       BEGIN CATCH
