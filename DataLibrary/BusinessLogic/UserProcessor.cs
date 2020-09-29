@@ -31,7 +31,10 @@ namespace DataLibrary.BusinessLogic
       return lastId > 0;
     }
 
-
+    public bool UserExists(string emailAddress)
+    {
+      return userDataAccess.Exists(emailAddress);
+    }
 
     public void Dispose()
     {

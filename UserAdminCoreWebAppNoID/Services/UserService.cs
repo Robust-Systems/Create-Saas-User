@@ -18,9 +18,14 @@ namespace UserAdminCoreWebAppNoID.Services
       userProcessor = new UserProcessor(connectionString);
     }
 
-    public void CreateUserAccount(UserModel model)
+    public bool CreateUserAccount(UserModel model)
     {
-      userProcessor.CreateUser(model.EmailAddress, model.Password);
+      return userProcessor.CreateUser(model.EmailAddress, model.Password);
+    }
+
+    public bool UserAlreadyExists(string emailAddress)
+    {
+      return userProcessor.UserExists(emailAddress);
     }
   }
 }

@@ -38,13 +38,20 @@ namespace UserAdminCoreWebAppNoID.Controllers
     [ValidateAntiForgeryToken]
     public IActionResult SignUp(UserModel model)
     {
-      var temp = _userService;
-
       if (ModelState.IsValid)
       {
-        _userService.CreateUserAccount(model);
+        if (_userService.UserAlreadyExists(model.EmailAddress))
+        {
+          ModelState.AddModelError(string.Empty, $"Email address {model.EmailAddress} is already registered.");
+        }
+        else
+        {
+          _userService.CreateUserAccount(model);
 
-        return RedirectToAction("Index");
+          ViewData.Add("EmailAddress", $"{model.EmailAddress}");
+
+          return View("SignedUp");
+        }
       }
 
       return View();
