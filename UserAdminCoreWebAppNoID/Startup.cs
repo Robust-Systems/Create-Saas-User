@@ -1,4 +1,3 @@
-using DataLibrary.BusinessLogic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,12 +20,6 @@ namespace UserAdminCoreWebAppNoID
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddControllersWithViews();
-
-      //services.AddSingleton<IUserProcessor, UserProcessor>(serviceProvider =>
-      //{
-      //  var connectionString = Configuration["ConnectionStrings:ConnectionString"];
-      //  return new UserProcessor(connectionString);
-      //});
 
       services.AddSingleton<UserService>();
     }
